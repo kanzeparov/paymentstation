@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+              android:layout_weight="8"
+                tools:context=".BluetoothActivity" >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:padding="15dp"
+        android:text="Info"
+        android:textSize="20sp"
+        android:id="@+id/info"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Pay"
+        android:layout_weight="2"
+        android:id="@+id/pay"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="500dp">
+    <ListView
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.manager.direct.recyclerclient">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".BluetoothActivity">
+
+        </activity>
+
+        <!--
+        Developers should put application credentials here.To obtain them, please register the application
+        at https://developer.here.com/develop/mobile-sdks
+        -->
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="ZQhAFD46IiXLF0SpAZs0"/>
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="Fqsg_rwwSy7RZch7C-z_nQ"/>
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="VwamYC06ilskazAsv+1P3udrU+x8k4dYW73iIDt1AmzlxJBPT0qjGSRTqsl/aqZOdMSpZRUXMwAJdtNWmVVzWliZsjs7BSd62VJxAg/1y+ZOyGQ2FMKQJnJG6anERq0wPfRuUz2/GfG1rNUYQW2R/PY+/Cza/3rS2GvldB3k0iF6vLFc5hLVCm3RbauDF0wWrSXF0Y1aXp89SPUc6Cuznu4TmhzuWVSGExdazZe7vf6Hfg3V3Y9c6Qa85J9CaixZM1GFh9tmIvJQ5Pk4iJFSmei8QO8RyRr1Agz6R/fQESzOS8zu9d9N5R/NHA5+m4iKdNVQiHj+1K6MflpUIxzxAqoxu+hbNzgutTYDN5TxR+/GGT8D1roPCQQ+TtHlDLTi7i1P/hgPjHhuyAvyoNpO/FbVMwFUg2qVM8J6m/pVypP4uRR0+wPfFH//u6doarfupIXFENDmHCMbA/5KBvrHy3ccxJjgw3Ku9an0vfvT39iJQdLCBfyRMOVgUyv0QK5dTmWHmNMT419Sa0bn6TIsB5CHjwHrc85KLZ2t8dc1lzdbzqv6r3uzMkvoIqiS5bFyfdgFTK72hbu4ygpidxQhyU0lVypA3m1Ko7OWLCnoPIjMuUUqlZO5olFU/sTWEU7JhRawLpgSPBSqxiWobv/gzxJRV8j9e57PZPbhlvxincI="/>
+
+        <!--
+        Developers should always provide custom values for each of {YOUR_LABEL_NAME} and {YOUR_INTENT_NAME}.
+        Do not reuse HERE SDK defaults.
+        -->
+
+
+        <service android:exported="false" android:label="BasicMapSolutionMapService" android:name="com.here.android.mpa.service.MapService">
+            <intent-filter>
+                <action android:name="com.here.android.tutorial.MapService">
+                </action>
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".MapActivity"
+            android:label="@string/title_activity_map"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
