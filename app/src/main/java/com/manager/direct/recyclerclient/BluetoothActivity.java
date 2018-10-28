@@ -98,7 +98,7 @@ public class BluetoothActivity extends AppCompatActivity  implements AdapterView
             public void onClick(View v) {
 
 
-                
+
 
                 new Thread(new Runnable() {
                     @Override

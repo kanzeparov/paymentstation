@@ -108,7 +108,7 @@ public class MapActivity extends AppCompatActivity{
                                 Map.Animation.NONE);
                         // Set the zoom level to the average between min and max
                         map.setZoomLevel((map.getMaxZoomLevel() + map.getMinZoomLevel()) / 2);
-
+                        createRoute(new GeoCoordinate(55.751244, 37.618523, 0.0),new GeoCoordinate(55.7624, 37.6223, 0.0))
                         //createMapMarker(map.getCenter());
                     } else {
                         System.out.println("ERROR: Cannot initialize Map Fragment");
